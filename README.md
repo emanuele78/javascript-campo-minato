@@ -1,4 +1,4 @@
-# CHARTJS DEMO
+# CAMPO MINATO
 Gioco del Campo Minato realizzato in JavaScript.
 
 [![Generic badge](https://img.shields.io/badge/LIVEDEMO-HERE-<COLOR>.svg)](https://emanuelemazzante.dev/demo/campo-minato/)
