@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<link crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" rel="stylesheet">
+		<title>Campo Minato | Una demo di Emanuele Mazzante</title>
+		<link href="dist/app.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="header">
+			<h1>Campo Minato</h1>
+			<h3>Trova tutte le bombe</h3>
+		</div>
+		<div class="game_settings">
+            <span>Difficoltà:
+                <span class="difficulty active_difficulty" data-value="easy">Facile</span>
+                <span class="difficulty" data-value="medium">Medio</span>
+                <span class="difficulty" data-value="hard">Difficile</span>
+            </span>
+		</div>
+		<div class="game">
+			<div class="game_style">
+				<div class="game_header">
+					<div class="count bombs_count">000</div>
+					<div class="header_face game_cell_hidden">
+						<i class="fas fa-smile"></i>
+					</div>
+					<div class="count seconds_count">000</div>
+				</div>
+				<div class="game_container"></div>
+			</div>
+		</div>
+		<div id="game_log"></div>
+		<script id="grid-template" type="text/x-handlebars-template">
+			{{#each this}}
+			<div class="row_wrapper" data-row-index="{{@index}}">
+				{{#each this.this}}
+				<div class="game_cell game_cell_hidden" data-cell-index="{{@index}}"></div>
+				{{/each}}
+			</div>
+			{{/each}}
+		</script>
+		<script src="dist/app.js"></script>
+	</body>
+</html>
